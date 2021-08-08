@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  position: relative;
+  background: #666;
+  background-image: linear-gradient(-20deg, skyblue, darkblue);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  padding: 20px;
+}
+
+.bubble {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -20%;
+  border: 2px solid rgba(117, 221, 224, 0.1);
+  background: rgba(255,255,255, 0.1);
+  border-radius: 50%;
+  animation-name: bubble;
+  animation-duration: 16s;
+  transition: 0.5s;
+}
+
+.bubble:hover {
+  background-color: rgba(255,255,255,0.8);
+}
+
+@keyframes bubble {
+  0% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(2000px);
+    opacity: 0;
+  }
+}
+
+.bubble:after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255,255,255,0.8), transparent);
+  left: 15%;
+  top: 15%;
+
+}
